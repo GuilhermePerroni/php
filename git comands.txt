@@ -1,0 +1,15 @@
+git init // comando para iniciar o repositorio
+
+git status // status atual
+
+git add // adiciona no git 
+
+git add . // adiciona tudo
+
+git commit -m "msg do seu commit"
+
+git commit -a -m "msg do seu commit" // pulo git add
+
+.gitignore // para ignorar arquivos
+
+git reset HEAD novo.php
