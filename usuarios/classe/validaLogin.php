@@ -28,6 +28,7 @@ function clear($input){
             $_SESSION['usuariologado'] = true;
             $_SESSION['usuariologadoId'] = $dados['id'];
             $_SESSION['usuariologadoNome'] = $dados['nome'];
+            $_SESSION['usuariologadoEmail'] = $dados['email'];
             $_SESSION['mensagem'] = "Login Realizado com Sucesso!";
 
             header('Location: ../../index.php');
