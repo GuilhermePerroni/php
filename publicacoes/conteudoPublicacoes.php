@@ -27,7 +27,7 @@ require_once 'classe/classePublicacoes.php';
 
             <div class="row">
                 <div class="col s12 m12">
-                <div class="card  teal lighten-2">
+                <div class="card  grey darken-3">
                     <div class="card-content white-text" >
                     <span class="card-title light"> <?php echo $publicacoes->titulo; ?></span>
                     

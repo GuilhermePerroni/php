@@ -1,4 +1,11 @@
 <?php
+ //require_once '../app/categorias/classe/classeCategoria.php';
+
+
+define('__ROOT__', dirname(dirname(__FILE__)));
+
+require_once(__ROOT__.'/categorias/classe/classeCategoria.php');
+
   if (!isset($_SESSION)) session_start(); 
 
     if (isset($_GET['deslogar'])): 
@@ -17,11 +24,6 @@ if (!isset($_SESSION['usuariologado'])==true):
     header('Location: /app/login.php');
     session_destroy();
 endif;
-
-    define('ROOT',$_SERVER['DOCUMENT_ROOT']);
-
-    require_once '../app/categorias/classe/classeCategoria.php';
-
 
 ?>
 <!DOCTYPE html>
@@ -48,11 +50,11 @@ endif;
       <ul id="dropdownCategoria" class="dropdown-content">
         <?php
 					$categoria = new Categoria();
-					$resultado = $categoria->buscarTodosCategorias();
-					if (mysqli_num_rows($resultado) > 0 ): 
-						while($dados = mysqli_fetch_array($resultado)):
+					$resultado1 = $categoria->buscarTodosCategorias();
+					if (mysqli_num_rows($resultado1) > 0 ): 
+						while($dadosCat = mysqli_fetch_array($resultado1)):
 				?>
-					<li><a href="#!"><?php echo $dados['descricao']; ?></a></li>
+					<li><a href="index.php?buscaCategoriaEspecifica=<?php echo $dadosCat['id']; ?>"><?php echo $dadosCat['descricao']; ?></a></li>
           <li class="divider"></li>
 				<?php 
 					endwhile; 
@@ -67,11 +69,11 @@ endif;
       <ul id="dropdownCategoria1" class="dropdown-content">
         <?php
 					$categoria = new Categoria();
-					$resultado = $categoria->buscarTodosCategorias();
-					if (mysqli_num_rows($resultado) > 0 ): 
-						while($dados = mysqli_fetch_array($resultado)):
+					$resultado2 = $categoria->buscarTodosCategorias();
+					if (mysqli_num_rows($resultado2) > 0 ): 
+						while($dadosCat = mysqli_fetch_array($resultado2)):
 				?>
-					<li><a href="#!"><?php echo $dados['descricao']; ?></a></li>
+					<li><a href="/app/index.php?buscaCategoriaEspecifica=<?php echo $dadosCat['id']; ?>"><?php echo $dadosCat['descricao']; ?></a></li>
           <li class="divider"></li>
 				<?php 
 					endwhile; 
@@ -86,7 +88,7 @@ endif;
         
 
   <nav> 
-  <div  class="col s12 m6 push-m3 nav-wrapper teal lighten-2">
+  <div  class="col s12 m6 push-m3 nav-wrapper grey darken-3">
       <a href="#!" class="brand-logo">Menu Principal</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">

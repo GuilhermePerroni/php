@@ -2,7 +2,8 @@
 
 if (!isset($_SESSION)) session_start(); 
 
-//require_once '../../php_action/db_connect.php';
+//require_once 'app/conexao/db_connect.php';
+require_once(__ROOT__.'/conexao/db_connect.php');
 //include_once ROOT_PATH . '/php_action/db_connect.php';
 
 
@@ -17,6 +18,7 @@ class Categoria {
         
 
         $sql = "select * from categorias ";
+
         $resultado = mysqli_query($connect, $sql);
         return $resultado;
  
