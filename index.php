@@ -31,20 +31,16 @@ require_once 'publicacoes/classe/classePublicacoes.php';
                     else: 
                         $resultado = $publicacoes->buscarTodosPublicacoesGeral();
                     endif;
-                    
-
-					
-					
-				
+                
 					if (mysqli_num_rows($resultado) > 0 ): 
 
 						while($dados = mysqli_fetch_array($resultado)):
 			?>
-
-				
+		
+                  
             <div class="row">
-                <div class="col s12 m12">
-                <div class="card teal grey darken-3">
+                <div class="col s12 m12"  >
+                <div class="card <?php if($dados['nomeCor']!=""): echo $dados['nomeCor']; endif;  ?>   style="background-color: #f44336;" >
                     <div class="card-content white-text">
                     <span class="card-title"><?php echo $dados['titulo']; ?></span>
                     <p> Publicação feita dia: <?php echo  date("d/m/Y", strtotime($dados['dataLancamento'])) ?> </p>

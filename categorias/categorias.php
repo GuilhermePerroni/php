@@ -16,6 +16,7 @@ require_once 'classe/classeCategoria.php';
 
 				<th> Nº: </th>
 				<th> Descrição: </th>
+				<th> Cor: </th>
 				<th> ------ </th>
 				<th> ------ </th>
 			</thead>
@@ -34,6 +35,7 @@ require_once 'classe/classeCategoria.php';
 					<tr >
 						<td> <?php echo $dados['id']; ?> </td>
 						<td> <?php echo $dados['descricao']; ?> </td>
+						<td> <?php echo $dados['cor']; ?> </td>
 						<td> <a href="formularioCategoria.php?editar=<?php echo $dados['id']; ?>" class="btn-floating orange"> <i class="material-icons"> edit </i>  </a> </td>
 						<td> <a href="formularioCategoria.php?excluir=<?php echo $dados['id']; ?>" class="btn-floating red"> <i class="material-icons"> delete </i>  </a> </td>
 						

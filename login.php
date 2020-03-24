@@ -39,6 +39,7 @@ include_once 'conexao\db_connect.php';
 
     <div class="login-page">
   <div class="form">
+    <h2> Login </h2>
     <form class="login-form" action="usuarios/classe/validaLogin.php" method="POST" >
       <input type="text" placeholder="E-mail" name="email" id="email">
       <input type="password" placeholder="Senha"name="senha" id="senha"/>

@@ -35,7 +35,7 @@ class Publicacoes {
     public function buscarTodosPublicacoesGeral(){
         global $connect;
     
-        $sql = "select p.*, c.descricao as nomeCategoria, u.nome as nomeUsuario from publicacoes as p left join categorias as c on (p.categoria = c.id) left join usuarios as u on (p.idusuario = u.id) ";
+        $sql = "select p.*, c.descricao as nomeCategoria, c.cor as nomeCor, u.nome as nomeUsuario from publicacoes as p left join categorias as c on (p.categoria = c.id) left join usuarios as u on (p.idusuario = u.id) ";
         $resultado = mysqli_query($connect, $sql);
         return $resultado;
  
@@ -44,7 +44,7 @@ class Publicacoes {
     public function buscarPublicacaoPorCategoria($identificador){
         global $connect;
     
-        $sql = "select p.*, c.descricao as nomeCategoria, u.nome as nomeUsuario from publicacoes as p left join categorias as c on (p.categoria = c.id) left join usuarios as u on (p.idusuario = u.id) where p.categoria = '$identificador' ";
+        $sql = "select p.*, c.descricao as nomeCategoria, c.cor as nomeCor, u.nome as nomeUsuario from publicacoes as p left join categorias as c on (p.categoria = c.id) left join usuarios as u on (p.idusuario = u.id) where p.categoria = '$identificador' ";
         $resultado = mysqli_query($connect, $sql);
         return $resultado;
  

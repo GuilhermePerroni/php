@@ -1,10 +1,13 @@
 <?php
- //require_once '../app/categorias/classe/classeCategoria.php';
+ 
+ 
+ //require_once '/app/categorias/classe/classeCategoria.php';
+ 
+ require_once($_SERVER["DOCUMENT_ROOT"].'/app/categorias/classe/classeCategoria.php');
 
+ //define('__ROOT__', dirname(dirname(__FILE__)));
 
-define('__ROOT__', dirname(dirname(__FILE__)));
-
-require_once(__ROOT__.'/categorias/classe/classeCategoria.php');
+ //require_once(__ROOT__.);
 
   if (!isset($_SESSION)) session_start(); 
 
@@ -54,7 +57,7 @@ endif;
 					if (mysqli_num_rows($resultado1) > 0 ): 
 						while($dadosCat = mysqli_fetch_array($resultado1)):
 				?>
-					<li><a href="index.php?buscaCategoriaEspecifica=<?php echo $dadosCat['id']; ?>"><?php echo $dadosCat['descricao']; ?></a></li>
+					<li><a href="/app/index.php?buscaCategoriaEspecifica=<?php echo $dadosCat['id']; ?>"><?php echo $dadosCat['descricao']; ?></a></li>
           <li class="divider"></li>
 				<?php 
 					endwhile; 
@@ -107,10 +110,10 @@ endif;
   <ul id="mobile-demo" class="sidenav">
     <li>
       <div class="user-view">
-        <div class="background">
-          <img src="/app/images/office.jpg">
+        <div class="background grey darken-3">
+          
         </div>
-        <a href="#user"><img class="circle" src="/app/images/yuna.jpg"></a>           
+        <a href="#user"><img class="circle" src="/app/images/face.png"></a>           
 
         <a href="#name"><span class="white-text name"><?php echo $_SESSION['usuariologadoNome'] ?></span></a>
         <a href="#email"><span class="white-text email"><?php echo $_SESSION['usuariologadoEmail'] ?></span></a>

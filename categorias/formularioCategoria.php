@@ -45,6 +45,65 @@ require_once 'classe/classeCategoria.php';
                 <label for="descricao"> Descricao </label>
             </div>
 
+            <div class="input-field col s12 ">
+                <select name="cor" id="cor"  >
+                <option value="" disabled selected>Choose your option</option>
+                <option value="red lighten-2">red lighten-2</option>
+                <option value="pink darken-2">pink darken-2</option>
+                <option value="purple darken-2">purple darken-2</option>
+                <option value="light-green darken-2">light-green darken-2</option>
+                </select>
+                <label>Materialize Select</label>
+            </div>
+
+            <script>
+                var cor = document.getElementById('cor');
+                cor.value = '<?php echo $categoria->cor; ?>';
+
+                
+            </script>
+
+            <div class="row">
+                <div class="col s1 m1 red lighten-2">
+                    <p> red lighten-2</p>
+                </div>
+                <div class="col s1 m1 pink darken-2">
+                    <p> pink darken-2</p>
+                </div>
+                <div class="col s1 m1 purple darken-2">
+                    <p> purple darken-2</p>
+                </div>
+                <div class="col s1 m1 deep-purple darken-2">
+                    <p> deep-purple darken-2</p>
+                </div>
+                <div class="col s1 m1 indigo darken-2">
+                    <p> indigo darken-2</p>
+                </div>
+                <div class="col s1 m1 blue darken-2">
+                    <p> blue darken-2</p>
+                </div>
+                <div class="col s1 m1  teal darken-2">
+                    <p>  teal darken-2</p>
+                </div>
+                <div class="col s1 m1   deep-orange darken-2">
+                    <p>   deep-orange darken-2</p>
+                </div>
+                <div class="col s1 m1   cyan darken-2">
+                    <p>   cyan darken-2</p>
+                </div>
+                <div class="col s1 m1  lime darken-2">
+                    <p>  lime darken-2</p>
+                </div>
+                <div class="col s1 m1  light-green darken-2">
+                    <p>  light-green darken-2</p>
+                </div>
+                <div class="col s1 m1   brown darken-2">
+                    <p>   brown darken-2</p>
+                </div>
+
+
+            </div>
+
 
             <?php 
                   if (isset($_GET['novo'])): ?>

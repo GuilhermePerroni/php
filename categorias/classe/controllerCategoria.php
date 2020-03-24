@@ -19,6 +19,7 @@ if(isset($_POST['btn-cadastrar'])):
     
     $categoria->nome      = clear($_POST['nome']);
     $categoria->descricao = clear($_POST['descricao']);
+    $categoria->cor = clear($_POST['cor']);
 
     $categoria->adicionar();
 endif;
@@ -29,6 +30,7 @@ if(isset($_POST['btn-editar'])):
     $categoria->id        = clear($_POST['id']);
     $categoria->nome      = clear($_POST['nome']);
     $categoria->descricao = clear($_POST['descricao']);
+    $categoria->cor = clear($_POST['cor']);
     
     $categoria->atualizar();
 
@@ -40,6 +42,7 @@ if(isset($_POST['btn-excluir'])):
     $categoria->id        = clear($_POST['id']);
     $categoria->nome      = clear($_POST['nome']);
     $categoria->descricao = clear($_POST['descricao']);
+    $categoria->cor = clear($_POST['cor']);
     
     $categoria->excluir();
 

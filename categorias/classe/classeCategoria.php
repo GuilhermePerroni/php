@@ -2,8 +2,9 @@
 
 if (!isset($_SESSION)) session_start(); 
 
-//require_once 'app/conexao/db_connect.php';
-require_once(__ROOT__.'/conexao/db_connect.php');
+//require_once '../app/conexao/db_connect.php';
+require_once($_SERVER["DOCUMENT_ROOT"].'/app/conexao/db_connect.php');
+//require_once(__ROOT__.'/conexao/db_connect.php');
 //include_once ROOT_PATH . '/php_action/db_connect.php';
 
 
@@ -12,6 +13,7 @@ class Categoria {
     
     public $id;
     public $descricao;
+    public $cor;
 
     public function buscarTodosCategorias(){
         global $connect;
@@ -37,6 +39,8 @@ class Categoria {
             
             $this->id = $dados['id'];
             $this->descricao = $dados['descricao'];
+            $this->cor = $dados['cor'];
+            
             
         endif;
     }
@@ -44,7 +48,7 @@ class Categoria {
     public function adicionar(){
         global $connect;
                           
-            $sql = "INSERT INTO categorias (descricao) VALUES ('$this->descricao')";
+            $sql = "INSERT INTO categorias (descricao, cor) VALUES ('$this->descricao', '$this->cor')";
             
             if(mysqli_query($connect, $sql)):
                 $_SESSION['mensagem'] = "Cadastrado com Sucesso!";
@@ -59,7 +63,7 @@ class Categoria {
     public function atualizar(){
         global $connect;
         
-        $sql = "update categorias set descricao = '$this->descricao' where id = '$this->id'";
+        $sql = "update categorias set descricao = '$this->descricao', cor = '$this->cor' where id = '$this->id'";
 
     
         if(mysqli_query($connect, $sql)):
