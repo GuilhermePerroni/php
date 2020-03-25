@@ -27,30 +27,22 @@ require_once 'classe/classePublicacoes.php';
 
             <div class="row">
                 <div class="col s12 m12">
-                <div class="card  grey darken-3">
+                <div class="card  teal lighten-2 ">
                     <div class="card-content white-text" >
-                    <span class="card-title light"> <?php echo $publicacoes->titulo; ?></span>
+                    <span class="card-title light black-text"> <?php echo $publicacoes->titulo; ?></span>
                     
             
                     
-                    <p  > Publicação feita dia: <?php echo  date("d/m/Y", strtotime($publicacoes->dataLancamento)) ?> </p>
-                    <p> Na Categoria: <?php echo $publicacoes->categoria; ?> </p>
-                    <p> Autor: <?php echo $publicacoes->usuario; ?> </p>
+                    <p class="black-text " > Publicação feita dia: <?php echo  date("d/m/Y", strtotime($publicacoes->dataLancamento)) ?> </p>
+                    <p class="black-text "> Na Categoria: <?php echo $publicacoes->categoria; ?> </p>
+                    <p class="black-text "> Autor: <?php echo $publicacoes->usuario; ?> </p>
                     <br>
 
-                    <p class="materialize-textarea " ><?php echo $publicacoes->conteudo; ?></p>
+                    <span class="black-text "> <?php echo $publicacoes->conteudo; ?></span>
                     <br>
                     
-                    
-
-                    <!--<textarea  align=justify id="textarea1" class="materialize-textarea" name="conteudo" id="conteudo" value="" > 
-                        
-                        <?php echo $publicacoes->conteudo; ?> 
-                    
-                    </textarea>-->
-
-                    
-                    <p> Referencia: <?php echo $publicacoes->referencia; ?> </p>
+            
+                    <p class="black-text " > Referencia: <?php echo $publicacoes->referencia; ?> </p>
                     <script> 
                         $('#textarea1').val('New Text');
                             M.textareaAutoResize($('#textarea1'));
