@@ -31,10 +31,10 @@ function clear($input){
             $_SESSION['usuariologadoEmail'] = $dados['email'];
             $_SESSION['mensagem'] = "Login Realizado com Sucesso!";
 
-            header('Location: ../../index.php');
+            header('Location: /index.php');
         else:   
             $_SESSION['mensagem'] = "Erro ao Logar!";
-            header('Location: /app/login.php');
+            header('Location: /login.php');
         endif;
 
     endif;

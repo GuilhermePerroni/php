@@ -10,9 +10,9 @@
 //endif;
 
 //require_once(__ROOT__.'/conexao\db_connect.php');
-include_once 'conexao\db_connect.php';
-include_once 'includes\header.php';
-include_once 'includes\message.php';
+include_once 'conexao/db_connect.php';
+include_once 'includes/header.php';
+include_once 'includes/message.php';
 require_once 'publicacoes/classe/classePublicacoes.php';
 
 ?>
@@ -25,6 +25,7 @@ require_once 'publicacoes/classe/classePublicacoes.php';
 			</thead>
 
             <?php
+                 //echo 'Current PHP version: ' . phpversion();
                 $publicacoes = new Publicacoes();
                     if (isset($_GET['buscaCategoriaEspecifica'])): 
                         $resultado = $publicacoes->buscarPublicacaoPorCategoria(mysqli_escape_string($connect, $_GET['buscaCategoriaEspecifica']));
@@ -49,7 +50,7 @@ require_once 'publicacoes/classe/classePublicacoes.php';
                     
                     </div>
                     <div class="card-action">
-                    <a href="publicacoes/conteudoPublicacoes.php?visualizar=<?php echo $dados['id']; ?>" class="btn-floating grey darken-3 "> <i class="material-icons"> visibility </i>  </a> </td>
+                    <a href="/publicacoes/conteudoPublicacoes.php?visualizar=<?php echo $dados['id']; ?>" class="btn-floating grey darken-3 "> <i class="material-icons"> visibility </i>  </a> </td>
                     </div>
                 </div>
                 </div>

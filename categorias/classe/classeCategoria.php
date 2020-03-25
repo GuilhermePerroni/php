@@ -2,8 +2,8 @@
 
 if (!isset($_SESSION)) session_start(); 
 
-//require_once '../app/conexao/db_connect.php';
-require_once($_SERVER["DOCUMENT_ROOT"].'/app/conexao/db_connect.php');
+require_once 'db_connect.php';
+//require_once($_SERVER["DOCUMENT_ROOT"].'/conexao/db_connect.php');
 //require_once(__ROOT__.'/conexao/db_connect.php');
 //include_once ROOT_PATH . '/php_action/db_connect.php';
 

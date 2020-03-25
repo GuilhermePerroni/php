@@ -58,7 +58,7 @@ require_once 'classe/classePublicacoes.php';
                     
                     </div>
                     <div class="card-action">
-                    <a href="/app/index.php" class="btn green"> Voltar </a>
+                    <a href="/index.php" class="btn green"> Voltar </a>
                     </div>
                 </div>
                 </div>

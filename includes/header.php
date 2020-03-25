@@ -3,7 +3,7 @@
  
  //require_once '/app/categorias/classe/classeCategoria.php';
  
- require_once($_SERVER["DOCUMENT_ROOT"].'/app/categorias/classe/classeCategoria.php');
+ require_once($_SERVER["DOCUMENT_ROOT"].'/categorias/classe/classeCategoria.php');
 
  //define('__ROOT__', dirname(dirname(__FILE__)));
 
@@ -12,7 +12,7 @@
   if (!isset($_SESSION)) session_start(); 
 
     if (isset($_GET['deslogar'])): 
-        header('Location: /app/login.php');
+        header('Location: login.php');
         $_SESSION['usuariologado'] = false;
         $_SESSION['usuariologadoId'] = '';
         $_SESSION['usuariologadoNome'] = '';
@@ -24,7 +24,7 @@
 if (!isset($_SESSION)) session_start();
 
 if (!isset($_SESSION['usuariologado'])==true):
-    header('Location: /app/login.php');
+    header('Location: login.php');
     session_destroy();
 endif;
 
@@ -49,7 +49,7 @@ endif;
       </head>
 
     <body>
-
+      <!-- esse aqui é o de mobile -->
       <ul id="dropdownCategoria" class="dropdown-content">
         <?php
 					$categoria = new Categoria();
@@ -57,7 +57,8 @@ endif;
 					if (mysqli_num_rows($resultado1) > 0 ): 
 						while($dadosCat = mysqli_fetch_array($resultado1)):
 				?>
-					<li><a href="/app/index.php?buscaCategoriaEspecifica=<?php echo $dadosCat['id']; ?>"><?php echo $dadosCat['descricao']; ?></a></li>
+					<li><a class="" href="/index.php?buscaCategoriaEspecifica=<?php echo $dadosCat['id']; ?>"><?php echo $dadosCat['descricao']; ?></a></li>
+         
           <li class="divider"></li>
 				<?php 
 					endwhile; 
@@ -76,7 +77,7 @@ endif;
 					if (mysqli_num_rows($resultado2) > 0 ): 
 						while($dadosCat = mysqli_fetch_array($resultado2)):
 				?>
-					<li><a href="/app/index.php?buscaCategoriaEspecifica=<?php echo $dadosCat['id']; ?>"><?php echo $dadosCat['descricao']; ?></a></li>
+					<li><a href="/index.php?buscaCategoriaEspecifica=<?php echo $dadosCat['id']; ?>"><?php echo $dadosCat['descricao']; ?></a></li>
           <li class="divider"></li>
 				<?php 
 					endwhile; 
@@ -88,19 +89,17 @@ endif;
 				?>
       </ul>
 
-        
-
+      
   <nav> 
   <div  class="col s12 m6 push-m3 nav-wrapper grey darken-3">
       <a href="#!" class="brand-logo">Menu Principal</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li> <a href="/app/index.php" class=""> Inicio </a>     </li>
+        <li> <a href="/index.php" class=""> Inicio </a>     </li>
         
         <li><a class="dropdown-trigger" href="#!" data-target="dropdownCategoria1">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
 
-        <li> <a href="/app/usuarios/usuarios.php" class=""> Usuários </a>     </li>
-        <li> <a href="/app/publicacoes/publicacoes.php" class=""> Publicacões </a>     </li>
+        <li> <a href="/publicacoes/publicacoes.php" class=""> Publicacões </a>     </li>
         <li> <a href="" class=""> Usuário Logado: <?php echo $_SESSION['usuariologadoNome']; ?> </a>     </li>
         <li> <a href="?deslogar" class="btn red"> Sair </a>     </li>
       </ul>
@@ -113,7 +112,7 @@ endif;
         <div class="background grey darken-3">
           
         </div>
-        <a href="#user"><img class="circle" src="/app/images/face.png"></a>           
+        <a href="#user"><img class="circle" src="/images/face.png"></a>           
 
         <a href="#name"><span class="white-text name"><?php echo $_SESSION['usuariologadoNome'] ?></span></a>
         <a href="#email"><span class="white-text email"><?php echo $_SESSION['usuariologadoEmail'] ?></span></a>
@@ -123,11 +122,11 @@ endif;
    
     <li><a class="subheader"><i class="material-icons">list</i>Menu</a></li>
     <li><div class="divider"></div></li>
-    <li> <a href="/app/index.php"                   class="waves-effect"> Inicio </a>     </li>
+    <li> <a href="/index.php"                   class="waves-effect"> Inicio </a>     </li>
 
     <li><a class="dropdown-trigger" href="#!" data-target="dropdownCategoria">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
-    <li> <a href="/app/usuarios/usuarios.php"       class="waves-effect"> Usuários </a>     </li>
-    <li> <a href="/app/publicacoes/publicacoes.php" class="waves-effect"> Publicacões </a>     </li>
+    
+    <li> <a href="/publicacoes/publicacoes.php" class="waves-effect"> Publicacões </a>     </li>
     
     <li><div class="divider"></div></li>
     <li> <a href="?deslogar"                        class="waves-effect btn red"> Sair </a>     </li>
