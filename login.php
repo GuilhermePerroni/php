@@ -14,7 +14,7 @@ endif;
     //header('Location: index.php');
 //endif;
 
-include_once 'conexao\db_connect.php';
+include_once 'conexao/db_connect.php';
 ?>
 
 <!DOCTYPE html>

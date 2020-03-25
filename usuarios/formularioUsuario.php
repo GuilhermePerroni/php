@@ -3,8 +3,8 @@ if (!isset($_SESSION)) session_start();
 
 
 
-include_once '../includes\header.php';
-require_once '../conexao\db_connect.php';
+include_once '../includes/header.php';
+require_once '../conexao/db_connect.php';
 require_once 'classe/classeUsuario.php';
 
 ?>

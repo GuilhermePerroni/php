@@ -3,8 +3,8 @@ if (!isset($_SESSION)) session_start();
 
 
 
-include_once '../includes\header.php';
-require_once '../conexao\db_connect.php';
+include_once '../includes/header.php';
+require_once '../conexao/db_connect.php';
 require_once 'classe/classeCategoria.php';
 
 ?>
@@ -51,7 +51,16 @@ require_once 'classe/classeCategoria.php';
                 <option value="red lighten-2">red lighten-2</option>
                 <option value="pink darken-2">pink darken-2</option>
                 <option value="purple darken-2">purple darken-2</option>
-                <option value="light-green darken-2">light-green darken-2</option>
+                
+                <option value="deep-purple darken-2">deep-purple darken-2   </option>
+                <option value="indigo darken-2">indigo darken-2   </option>
+                <option value="blue darken-2">blue darken-2   </option>
+                <option value="teal darken-2">teal darken-2   </option>
+                <option value="deep-orange darken-2">deep-orange darken-2   </option>
+                <option value="cyan darken-2">cyan darken-2   </option>
+                <option value="lime darken-2">lime darken-2   </option>
+                <option value="light-green darken-2"> light-green darken-2  </option>
+                <option value="brown darken-2">brown darken-2   </option>
                 </select>
                 <label>Materialize Select</label>
             </div>

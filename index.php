@@ -20,6 +20,18 @@ require_once 'publicacoes/classe/classePublicacoes.php';
 <div class="row">
 	<div class="col s12 m6 push-m3 ">
 		<h3 class="light"> Ultimas Atualizações </h3>
+        
+        <nav>
+            <div class="nav-wrapper grey darken-3 ">
+            <form action="?pesquisaIncremental" method="POST" >
+                <div class="input-field">
+                <input name="search" id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+                </div>
+            </form>
+            </div>
+        </nav>
 		
 			<thead>
 			</thead>
@@ -32,7 +44,13 @@ require_once 'publicacoes/classe/classePublicacoes.php';
                     else: 
                         $resultado = $publicacoes->buscarTodosPublicacoesGeral();
                     endif;
+
+                    if (isset($_GET['pesquisaIncremental'])): 
+                        $resultado = $publicacoes->buscarPublicacaoPesquisaIncremental(mysqli_escape_string($connect, $_POST['search']));
+                    endif;
                 
+
+                    
 					if (mysqli_num_rows($resultado) > 0 ): 
 
 						while($dados = mysqli_fetch_array($resultado)):

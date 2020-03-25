@@ -5,17 +5,17 @@
  
  require_once($_SERVER["DOCUMENT_ROOT"].'/categorias/classe/classeCategoria.php');
 
- //define('__ROOT__', dirname(dirname(__FILE__)));
-
- //require_once(__ROOT__.);
 
   if (!isset($_SESSION)) session_start(); 
 
     if (isset($_GET['deslogar'])): 
-        header('Location: login.php');
+        header('Location: /login.php');
         $_SESSION['usuariologado'] = false;
         $_SESSION['usuariologadoId'] = '';
         $_SESSION['usuariologadoNome'] = '';
+        $_SESSION['usuariologadoEmail'] = '';
+        $_SESSION['usuariologadoADM'] = '';
+        $_SESSION['usuariologadoEDITOR'] = '';
 
         session_destroy();
     endif;
@@ -24,7 +24,7 @@
 if (!isset($_SESSION)) session_start();
 
 if (!isset($_SESSION['usuariologado'])==true):
-    header('Location: login.php');
+    header('Location: /login.php');
     session_destroy();
 endif;
 
@@ -98,8 +98,28 @@ endif;
         <li> <a href="/index.php" class=""> Inicio </a>     </li>
         
         <li><a class="dropdown-trigger" href="#!" data-target="dropdownCategoria1">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
+        
+        <?php 
+          if ($_SESSION['usuariologadoADM']=='1'): ?>
+          <li> <a href="/categorias/categorias.php" class="waves-effect"> Cadastro de Categorias </a>     </li>
+          
+          <li> <a href="/publicacoes/publicacoes.php" class=""> Publicacões </a>     </li>
+          <li> <a href="/usuarios/usuarios.php"    class="waves-effect"> Usuarios </a>     </li>
+          
+        <?php 
+          endif;    
+        ?>
 
-        <li> <a href="/publicacoes/publicacoes.php" class=""> Publicacões </a>     </li>
+        
+
+        <?php 
+          if ($_SESSION['usuariologadoADM']==''):
+            if ($_SESSION['usuariologadoEDITOR']=='S'): ?>
+          <li> <a href="/publicacoes/publicacoes.php" class=""> Publicacões </a>     </li>
+        <?php 
+            endif;
+          endif;    
+        ?>
         <li> <a href="" class=""> Usuário Logado: <?php echo $_SESSION['usuariologadoNome']; ?> </a>     </li>
         <li> <a href="?deslogar" class="btn red"> Sair </a>     </li>
       </ul>
@@ -123,13 +143,27 @@ endif;
     <li><a class="subheader"><i class="material-icons">list</i>Menu</a></li>
     <li><div class="divider"></div></li>
     <li> <a href="/index.php"                   class="waves-effect"> Inicio </a>     </li>
-
     <li><a class="dropdown-trigger" href="#!" data-target="dropdownCategoria">Categorias<i class="material-icons right">arrow_drop_down</i></a></li>
     
-    <li> <a href="/publicacoes/publicacoes.php" class="waves-effect"> Publicacões </a>     </li>
-    
+    <?php 
+      if ($_SESSION['usuariologadoADM']=='1'): ?>
+      <li> <a href="/categorias/categorias.php" class="waves-effect"> Cadastro de Categorias </a>     </li>
+      
+      <li> <a href="/publicacoes/publicacoes.php" class="waves-effect"> Publicacões </a>     </li>
+      <li> <a href="/usuarios/usuarios.php"    class="waves-effect"> Usuarios </a>     </li>
+    <?php 
+      endif;    
+    ?>
+        <?php 
+          if ($_SESSION['usuariologadoADM']==''):
+            if ($_SESSION['usuariologadoEDITOR']=='S'): ?>
+          <li> <a href="/publicacoes/publicacoes.php" class=""> Publicacões </a>     </li>
+        <?php 
+            endif;
+          endif;    
+        ?>
     <li><div class="divider"></div></li>
-    <li> <a href="?deslogar"                        class="waves-effect btn red"> Sair </a>     </li>
+    <li> <a href="?deslogar"  class="waves-effect btn red"> Sair </a>     </li>
 
 
 

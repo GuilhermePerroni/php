@@ -1,7 +1,7 @@
 <?php
-include_once '../conexao\db_connect.php';
-include_once '../includes\header.php';
-include_once '../includes\message.php';
+include_once '../conexao/db_connect.php';
+include_once '../includes/header.php';
+include_once '../includes/message.php';
 require_once 'classe/classeUsuario.php';
 ?>
 
