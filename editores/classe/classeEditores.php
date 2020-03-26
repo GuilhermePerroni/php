@@ -20,12 +20,12 @@ class Usuario {
         global $connect;
         
 
-        $sql = "select * from usuarios ";
+        $sql = "select * from usuarios where editor = 'S'";
         $resultado = mysqli_query($connect, $sql);
         return $resultado;
  
     }
-    
+
     public function buscarUsuario($identificador){
         global $connect;
         

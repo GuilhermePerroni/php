@@ -35,6 +35,11 @@ require_once 'classe/classeEditores.php';
                     
                     </div>
                     <div class="card-action">
+                    <?php if($dados['id']==$_SESSION['usuariologadoId'] || $_SESSION['usuariologadoADM']=='1'):   ?>
+                    <a href="formularioEditores.php?editar=<?php echo $dados['id']; ?>" class="btn-floating grey darken-3 "> <i class="material-icons"> edit </i>  </a> </td>
+                    <?php endif; ?>
+
+                    
                     </div>
                 </div>
                 </div>

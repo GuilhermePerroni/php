@@ -34,7 +34,7 @@ require_once 'classe/classeEditores.php';
 				<?php
 					
 					$usuario = new Usuario();
-					$resultado = $usuario->buscarUsuario('4'); ?>
+					$resultado = $usuario->buscarUsuario($_SESSION['usuariologadoId']); ?>
 
 					
 				
