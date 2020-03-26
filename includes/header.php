@@ -1,7 +1,7 @@
 <?php
  
  
- //require_once '/app/categorias/classe/classeCategoria.php';
+ //require_once '/categorias/classe/classeCategoria.php';
  
  require_once($_SERVER["DOCUMENT_ROOT"].'/categorias/classe/classeCategoria.php');
 

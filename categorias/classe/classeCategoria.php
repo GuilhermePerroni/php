@@ -3,8 +3,8 @@
 if (!isset($_SESSION)) session_start(); 
 
 //versao de teste PC Trocar ao subir
-require_once 'db_connect.php';
-
+//require_once 'db_connect.php';
+require_once($_SERVER["DOCUMENT_ROOT"].'/conexao/db_connect.php');
 //versao de producao
 //include_once '../../conexao/db_connect.php';
 
