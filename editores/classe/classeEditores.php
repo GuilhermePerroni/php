@@ -57,10 +57,10 @@ class Usuario {
     
         if(mysqli_query($connect, $sql)):
             $_SESSION['mensagem'] = "Atualizado com Sucesso!";
-            header('Location: ../editores.php');
+            header('Location: ../conteudoEditores.php');
         else:   
             $_SESSION['mensagem'] = "Erro ao Atualizar!";
-            header('Location: ../editores.php');
+            header('Location: ../conteudoEditores.php');
         endif;
 
 

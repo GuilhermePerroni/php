@@ -22,7 +22,6 @@ if(isset($_POST['btn-editar'])):
     $usuario->nome      = clear($_POST['nome']);
     $usuario->curriculo = clear($_POST['curriculo']);
     $usuario->email     = clear( $_POST['email']);
-    $usuario->editor    = clear( $_POST['editor']);
     
     $usuario->atualizar();
 
