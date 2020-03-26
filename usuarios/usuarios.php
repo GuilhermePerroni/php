@@ -1,4 +1,12 @@
 <?php
+
+
+if (!isset($_SESSION)) session_start(); 
+
+if ($_SESSION['usuariologadoADM']!='1'):
+	header('Location: /index.php');
+endif;
+
 include_once '../conexao/db_connect.php';
 include_once '../includes/header.php';
 include_once '../includes/message.php';
