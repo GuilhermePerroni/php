@@ -8,10 +8,31 @@ if (!isset($_SESSION)) session_start();
 //endif;
 
 include_once '../conexao/db_connect.php';
-include_once '../includes/header.php';
+
 include_once '../includes/message.php';
-require_once 'classe/classeUsuario.php';
+require_once 'usuarios/classe/classeUsuario.php';
+
 ?>
+
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=0.8"/>
+
+      <script src="../ckeditor4/ckeditor.js"></script>
+      <!--<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>-->
+      
+      
+      </head>
+	  <body>
 
 
 
