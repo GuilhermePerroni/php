@@ -98,7 +98,7 @@ class Usuario {
                 
                 $subject = "Validação de E-mail Site: ProResumos.xyz";
                 
-                $message = "http://proresumos.xyz/usuarios/validaUsuarioEmail.php?usuarioValidar=".$dados['id'];
+                $message = "http://proresumos.xyz/validaUsuarioEmail.php?usuarioValidar=".$dados['id'];
                 
                 $headers = "De:". $from;
                 

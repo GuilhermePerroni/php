@@ -1,15 +1,8 @@
 <?php
 
+include_once 'conexao/db_connect.php';
 
-if (!isset($_SESSION)) session_start(); 
-
-//if ($_SESSION['usuariologadoADM']!='1'):
-//	header('Location: /index.php');
-//endif;
-
-include_once '../conexao/db_connect.php';
-
-include_once '../includes/message.php';
+include_once 'includes/message.php';
 require_once 'usuarios/classe/classeUsuario.php';
 
 ?>
@@ -27,7 +20,6 @@ require_once 'usuarios/classe/classeUsuario.php';
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=0.8"/>
 
-      <script src="../ckeditor4/ckeditor.js"></script>
       <!--<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>-->
       
       
@@ -77,8 +69,5 @@ require_once 'usuarios/classe/classeUsuario.php';
 	</div>
 </div>
 
-<?php
-
-include_once '../includes\footer.php';
-?>
-     
+</body>
+   </html>     
