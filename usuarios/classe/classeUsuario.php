@@ -15,6 +15,23 @@ class Usuario {
     public $email;
     public $editor;
 
+    public function validarUsuario($identificador){
+        global $connect;
+        
+        $sql = "update usuarios set validado = 'S' where id = '$identificador'";
+
+    
+        if(mysqli_query($connect, $sql)):
+            $_SESSION['mensagem'] = "Atualizado com Sucesso!";
+            header('Location: ../validaUsuarioEmail.php');
+        else:   
+            $_SESSION['mensagem'] = "Erro ao Atualizar!";
+            header('Location: ../validaUsuarioEmail.php');
+        endif;
+
+
+    }
+
     public function buscarTodosUsuarios(){
         global $connect;
         
@@ -55,10 +72,44 @@ class Usuario {
             if(mysqli_query($connect, $sql)):
                 $_SESSION['mensagem'] = "Cadastrado com Sucesso!";
                 header('Location: ../usuarios.php');
+
+
             else:   
                 $_SESSION['mensagem'] = $sql;
                 header('Location: ../usuarios.php');
             endif;
+
+            $sql = "select max(id) as id from usuarios ";
+            $resultado = mysqli_query($connect, $sql);
+        
+
+            if (mysqli_num_rows($resultado) > 0 ): 
+                $dados = mysqli_fetch_array($resultado);
+                
+               
+                ini_set('display_errors', 1);
+                    
+                error_reporting(E_ALL);
+                
+                $from = "guilhermeroni@gmail.com";
+                
+                //$to = "$this->email";
+                $to = "$this->email";
+                
+                $subject = "Validação de E-mail Site: ProResumos.xyz";
+                
+                $message = "http://proresumos.xyz/usuarios/validaUsuarioEmail.php?usuarioValidar=".$dados['id'];
+                
+                $headers = "De:". $from;
+                
+                mail($to, $subject, $message, $headers);
+                
+                echo "A mensagem de e-mail foi enviada.";
+                
+                
+            endif;
+               
+
         
     }
 
