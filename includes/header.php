@@ -120,6 +120,8 @@ endif;
             endif;
           endif;    
         ?>
+        <li> <a href="/editores/conteudoEditores.php"                   class="waves-effect"> Editores </a>     </li>
+    
         <li> <a href="" class=""> Usuário Logado: <?php echo $_SESSION['usuariologadoNome']; ?> </a>     </li>
         <li> <a href="?deslogar" class="btn red"> Sair </a>     </li>
       </ul>
@@ -162,6 +164,9 @@ endif;
             endif;
           endif;    
         ?>
+    <li> <a href="/editores/conteudoEditores.php"                   class="waves-effect"> Editores </a>     </li>
+    
+
     <li><div class="divider"></div></li>
     <li> <a href="?deslogar"  class="waves-effect btn red"> Sair </a>     </li>
 
