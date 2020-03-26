@@ -76,8 +76,8 @@ require_once 'classe/classePublicacoes.php';
 
             <!--  montador de select -->
             <div class="input-field col s12" >
-                <select name="categoria" id="categoria" >
-                <option value="" disabled selected>Selecione a Categoria</option>
+                <select name="categoria" id="categoria" required >
+               
 
             <?php  
             $categorias = new Publicacoes();
