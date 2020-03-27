@@ -71,10 +71,7 @@ require_once 'classe/classeUsuario.php';
                 <label for="email"> E-mail </label>
             </div>
 
-            <div class="input-field col s12">
-                <input class="validate" type="text" name="editor" id="editor" value="<?php echo $usuario->editor; ?>" >
-                <label for="editor"> Editor </label>
-            </div>
+            
 
             <?php 
                   if (isset($_GET['novo'])): ?>
@@ -91,7 +88,9 @@ require_once 'classe/classeUsuario.php';
 
     
 
-    
+<?php
 
-</body>
-   </html>
+include_once '../includes/footer.php';
+?>
+     
+

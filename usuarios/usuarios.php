@@ -85,6 +85,6 @@ require_once 'classe/classeUsuario.php';
 
 <?php
 
-include_once '../includes\footer.php';
+include_once '../includes/footer.php';
 ?>
      
