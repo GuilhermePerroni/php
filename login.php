@@ -45,9 +45,11 @@ include_once 'conexao/db_connect.php';
       <input type="password" placeholder="Senha"name="senha" id="senha"/>
 
       <button type="submit" class="btn" name="btn-verificaLogin"> Entrar </button>
-
-      <!--<p class="message">Not registered? <a href="#">Create an account</a></p>-->
+      
+      <p class="message">Não Registrado? <a href="usuarios/formularioCadastro.php?novo">Criar Conta</a></p>
     </form>
+
+    
   </div>
 </div>
     </body>

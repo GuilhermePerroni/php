@@ -2,8 +2,9 @@
 
 if (!isset($_SESSION)) session_start(); 
 
-//require_once '../../php_action/db_connect.php';
+//require_once '../../conexao/db_connect.php';
 //include_once ROOT_PATH . '/php_action/db_connect.php';
+require_once($_SERVER["DOCUMENT_ROOT"].'/conexao/db_connect.php');
 
 
 class Usuario {
@@ -19,17 +20,12 @@ class Usuario {
         global $connect;
         
         $sql = "update usuarios set validado = 'S' where id = '$identificador'";
-
     
         if(mysqli_query($connect, $sql)):
             $_SESSION['mensagem'] = "Atualizado com Sucesso!";
-            header('Location: ../validaUsuarioEmail.php');
         else:   
             $_SESSION['mensagem'] = "Erro ao Atualizar!";
-            header('Location: ../validaUsuarioEmail.php');
         endif;
-
-
     }
 
     public function buscarTodosUsuarios(){
@@ -67,7 +63,7 @@ class Usuario {
     public function adicionar(){
         global $connect;
                           
-            $sql = "INSERT INTO usuarios (nome, senha, email, editor) VALUES ('$this->nome', '$this->senha', '$this->email', '$this->editor')";
+            $sql = "INSERT INTO usuarios (nome, senha, email, editor,curriculo) VALUES ('$this->nome', '$this->senha', '$this->email', '$this->editor', 'Preencher Curriculo')";
             
             if(mysqli_query($connect, $sql)):
                 $_SESSION['mensagem'] = "Cadastrado com Sucesso!";
@@ -79,7 +75,7 @@ class Usuario {
                 header('Location: ../usuarios.php');
             endif;
 
-            $sql = "select max(id) as id from usuarios ";
+           /* $sql = "select max(id) as id from usuarios ";
             $resultado = mysqli_query($connect, $sql);
         
 
@@ -107,7 +103,7 @@ class Usuario {
                 echo "A mensagem de e-mail foi enviada.";
                 
                 
-            endif;
+            endif;*/
                
 
         

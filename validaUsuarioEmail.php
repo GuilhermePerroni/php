@@ -1,9 +1,9 @@
 <?php
 
-include_once 'conexao/db_connect.php';
+//include_once 'conexao/db_connect.php';
 
-include_once 'includes/message.php';
 require_once 'usuarios/classe/classeUsuario.php';
+
 
 ?>
 
@@ -18,11 +18,7 @@ require_once 'usuarios/classe/classeUsuario.php';
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
       <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=0.8"/>
-
-      <!--<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>-->
-      
-      
+      <meta name="viewport" content="width=device-width, initial-scale=0.8"/>      
       </head>
 	  <body>
 
@@ -31,20 +27,16 @@ require_once 'usuarios/classe/classeUsuario.php';
 
 <div class="row">
 	<div class="col s12 m6 push-m3 ">
-		<h3 class="light"> Usuários </h3>
+		<h3 class="light"> Usuário </h3>
 		<table class="col s12 striped " >
 			<thead>
-
 				<th> Nº: </th>
 				<th> Nome: </th>
-				<th> Curriculo: </th>
 				<th> Email: </th>
-				
-				
 			</thead>
 				
 			<tbody  >
-				<?php
+			<?php
 					
 					$usuario = new Usuario();
 					$resultado = $usuario->buscarUsuario($_GET['usuarioValidar']);
@@ -53,18 +45,20 @@ require_once 'usuarios/classe/classeUsuario.php';
 					//http://proresumos.xyz/usuarios/validaUsuarioEmail.php?usuarioValidar=7
 					?>
 
-					
-				
 					<tr >
 						<td> <?php echo $usuario->id; ?> </td>
 						<td> <?php echo $usuario->nome; ?> </td>						
 						<td> <?php echo $usuario->email; ?> </td>
-						<td> Usuario Validado com Sucesso! </td>
-					
+						<td> Usuário Validade com Sucesso!  </td>
 					</tr>
+
 			
 			</tbody>
 		</table>
+		
+						 <a href="/index.php" class="btn green"> Clique para ir ao ProResumo.xyz </a>  
+					
+					
 		<br>
 	</div>
 </div>
