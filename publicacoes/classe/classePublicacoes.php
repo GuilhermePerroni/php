@@ -36,7 +36,7 @@ class Publicacoes {
     public function buscarPublicacaoPesquisaIncremental($texto){
         global $connect;
     
-        $sql = "select p.*, c.descricao as nomeCategoria, c.cor as nomeCor, u.nome as nomeUsuario from publicacoes as p left join categorias as c on (p.categoria = c.id) left join usuarios as u on (p.idusuario = u.id) where p.titulo like '%$texto%' ";
+        $sql = "select p.*, c.descricao as nomeCategoria, c.cor as nomeCor, u.nome as nomeUsuario from publicacoes as p left join categorias as c on (p.categoria = c.id) left join usuarios as u on (p.idusuario = u.id) where p.titulo like '%$texto%' order by p.id desc  ";
         $resultado = mysqli_query($connect, $sql);
         return $resultado;
  
@@ -45,7 +45,7 @@ class Publicacoes {
     public function buscarTodosPublicacoesGeral(){
         global $connect;
     
-        $sql = "select p.*, c.descricao as nomeCategoria, c.cor as nomeCor, u.nome as nomeUsuario from publicacoes as p left join categorias as c on (p.categoria = c.id) left join usuarios as u on (p.idusuario = u.id) ";
+        $sql = "select p.*, c.descricao as nomeCategoria, c.cor as nomeCor, u.nome as nomeUsuario from publicacoes as p left join categorias as c on (p.categoria = c.id) left join usuarios as u on (p.idusuario = u.id) order by p.id desc ";
         $resultado = mysqli_query($connect, $sql);
         return $resultado;
  
@@ -54,7 +54,7 @@ class Publicacoes {
     public function buscarPublicacaoPorCategoria($identificador){
         global $connect;
     
-        $sql = "select p.*, c.descricao as nomeCategoria, c.cor as nomeCor, u.nome as nomeUsuario from publicacoes as p left join categorias as c on (p.categoria = c.id) left join usuarios as u on (p.idusuario = u.id) where p.categoria = '$identificador' ";
+        $sql = "select p.*, c.descricao as nomeCategoria, c.cor as nomeCor, u.nome as nomeUsuario from publicacoes as p left join categorias as c on (p.categoria = c.id) left join usuarios as u on (p.idusuario = u.id) where p.categoria = '$identificador' order by p.id desc";
         $resultado = mysqli_query($connect, $sql);
         return $resultado;
  
@@ -115,7 +115,7 @@ class Publicacoes {
     public function atualizar(){
         global $connect;
         
-        $sql = "update publicacoes set titulo = '$this->titulo', conteudo = '$this->conteudo', dataLancamento = '$this->dataLancamento', tags = '$this->tags', categoria = '$this->categoria'  where id = '$this->id'";
+        $sql = "update publicacoes set titulo = '$this->titulo', conteudo = '$this->conteudo', dataLancamento = '$this->dataLancamento', tags = '$this->tags', categoria = '$this->categoria', referencia = '$this->referencia'  where id = '$this->id'";
 
     
         if(mysqli_query($connect, $sql)):
