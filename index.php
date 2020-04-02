@@ -16,6 +16,29 @@ include_once 'includes/message.php';
 require_once 'publicacoes/classe/classePublicacoes.php';
 
 ?>
+<a href="#" data-target="slide-out" class="btn btn-customizer gradient-45deg-indigo-light-blue accent-2 white-text sidenav-trigger theme-cutomizer-trigger"><i class="material-icons">settings</i></a>
+
+
+    <ul id="slide-out" class="sidenav">
+    <div class="container">
+        
+        <li>Escolha as Cores</li>
+        <span onclick="trocarCor('gradient-45deg-indigo-light-blue')" class="menu-color-option gradient-45deg-indigo-light-blue " >  </span>    
+        <span onclick="trocarCor('grandientev-vermelho-claro')" class="menu-color-option grandientev-vermelho-claro " >  </span> 
+        <span onclick="trocarCor('grandientev-rosa-claro')" class="menu-color-option grandientev-rosa-claro " > </span> 
+        <span onclick="trocarCor('grandientev-roxo-claro ')" class="menu-color-option grandientev-roxo-claro " > </span> 
+        <span onclick="trocarCor('grandientev-azul-roxo-claro')" class="menu-color-option grandientev-azul-roxo-claro " >  </span> 
+        <span onclick="trocarCor('grandientev-indigo-claro')" class="menu-color-option grandientev-indigo-claro " >  </span> 
+        <span onclick="trocarCor('grandientev-azul-claro')" class="menu-color-option grandientev-azul-claro" >  </span> 
+        <span onclick="trocarCor('grandientev-teal-claro')" class="menu-color-option grandientev-teal-claro" >  </span> 
+        <span onclick="trocarCor('grandientev-laranja-claro')" class="menu-color-option grandientev-laranja-claro " >  </span> 
+        <span onclick="trocarCor('grandientev-cyan-claro')" class="menu-color-option grandientev-cyan-claro " > </span> 
+        <span onclick="trocarCor('grandientev-lime-claro')" class="menu-color-option grandientev-lime-claro " > </span> 
+        <span onclick="trocarCor('grandientev-verde-claro')" class="menu-color-option grandientev-verde-claro " > </span> 
+        <span onclick="trocarCor('grandientev-marrom-claro')" class="menu-color-option grandientev-marrom-claro " > </span> 
+    </div>   
+    </ul>
+
 
 <div class="row">
 	<div class="col s12 m6 push-m3 ">
@@ -86,6 +109,25 @@ require_once 'publicacoes/classe/classePublicacoes.php';
 	</div>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <?php
