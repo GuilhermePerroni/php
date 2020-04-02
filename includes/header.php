@@ -44,8 +44,96 @@ endif;
 
       <script src="../ckeditor4/ckeditor.js"></script>
       <!--<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>-->
+
+      <link rel="stylesheet" type="text/css" href="materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="style.min.css">
       
-      
+      <style>
+        
+        .gradient-45deg-indigo-light-blue{
+            background:-webkit-linear-gradient(45deg,#424242,#757575)!important;
+            background:linear-gradient(45deg,#424242,#757575)!important      
+        }
+
+        
+
+        .gradient-45deg-red-pink{
+            background:-webkit-linear-gradient(45deg,#ff5252,#f48fb1)!important;
+            background:linear-gradient(45deg,#ff5252,#f48fb1)!important
+        }
+
+        .grandiente-roxo-claro{
+            background:-webkit-linear-gradient(45deg,#6a1b9a,#e1bee7)!important;
+            background:linear-gradient(45deg,#6a1b9a,#e1bee7)!important
+        }
+  
+
+
+        .grandientev-vermelho-claro{
+            background:-webkit-linear-gradient(45deg,#e57373,#ffcdd2)!important;
+            background:linear-gradient(45deg,#e57373,#ffcdd2)!important
+        }
+
+        .grandientev-rosa-claro{
+            background:-webkit-linear-gradient(45deg,#c2185b,#f8bbd0)!important;
+            background:linear-gradient(45deg,#c2185b,#f8bbd0)!important
+        }
+
+        .grandientev-roxo-claro{
+            background:-webkit-linear-gradient(45deg,#7b1fa2 ,#e1bee7)!important;
+            background:linear-gradient(45deg,#7b1fa2 ,#e1bee7)!important
+        }
+
+        .grandientev-azul-roxo-claro{
+            background:-webkit-linear-gradient(45deg,#512da8 ,#d1c4e9)!important;
+            background:linear-gradient(45deg,#512da8 ,#d1c4e9)!important
+        }
+            
+        .grandientev-indigo-claro{
+            background:-webkit-linear-gradient(45deg,#303f9f  ,#c5cae9)!important;
+            background:linear-gradient(45deg,#303f9f  ,#c5cae9)!important
+        }
+
+        .grandientev-azul-claro{
+            background:-webkit-linear-gradient(45deg,#1976d2   ,#bbdefb )!important;
+            background:linear-gradient(45deg,#1976d2   ,#bbdefb )!important
+        }
+
+        .grandientev-teal-claro{
+            background:-webkit-linear-gradient(45deg,#00796b,#b2dfdb  )!important;
+            background:linear-gradient(45deg,#00796b,#b2dfdb  )!important
+        }
+
+        .grandientev-laranja-claro{
+            background:-webkit-linear-gradient(45deg,#e64a19 ,#ffccbc   )!important;
+            background:linear-gradient(45deg,#e64a19 ,#ffccbc   )!important
+        }
+        
+        .grandientev-cyan-claro{
+            background:-webkit-linear-gradient(45deg,#0097a7  ,#b2ebf2    )!important;
+            background:linear-gradient(45deg,#0097a7  ,#b2ebf2    )!important
+        }
+        
+        .grandientev-lime-claro{
+            background:-webkit-linear-gradient(45deg,#afb42b   ,#f0f4c3     )!important;
+            background:linear-gradient(45deg,#afb42b   ,#f0f4c3     )!important
+        }
+
+        .grandientev-verde-claro{
+            background:-webkit-linear-gradient(45deg,#689f38    ,#dcedc8      )!important;
+            background:linear-gradient(45deg,#689f38    ,#dcedc8      )!important
+        }
+
+        .grandientev-marrom-claro{
+            background:-webkit-linear-gradient(45deg,#5d4037     ,#d7ccc8       )!important;
+            background:linear-gradient(45deg,#5d4037     ,#d7ccc8       )!important
+        }
+        
+
+
+        </style>
+
+
       </head>
 
     <body>
@@ -91,7 +179,7 @@ endif;
 
       
   <nav> 
-  <div  class="col s12 m6 push-m3 nav-wrapper grey darken-3">
+  <div  class="col s12 m6 push-m3 nav-wrapper gradient-45deg-indigo-light-blue">
       <a href="#!" class="brand-logo">Menu Principal</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
@@ -134,7 +222,7 @@ endif;
         <div class="background grey darken-3">
           
         </div>
-        <a href="#user"><img class="circle" src="/images/face.png"></a>           
+        <a href="#user"><img class="circle" src="/images/dente.png"></a>           
 
         <a href="#name"><span class="white-text name"><?php echo $_SESSION['usuariologadoNome'] ?></span></a>
         <a href="#email"><span class="white-text email"><?php echo $_SESSION['usuariologadoEmail'] ?></span></a>

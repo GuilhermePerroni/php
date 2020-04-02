@@ -48,19 +48,34 @@ require_once 'classe/classeCategoria.php';
             <div class="input-field col s12 ">
                 <select name="cor" id="cor"  >
                 <option value="" disabled selected>Choose your option</option>
-                <option value="red lighten-2">red lighten-2</option>
-                <option value="pink darken-2">pink darken-2</option>
-                <option value="purple darken-2">purple darken-2</option>
+
                 
-                <option value="deep-purple darken-2">deep-purple darken-2   </option>
-                <option value="indigo darken-2">indigo darken-2   </option>
-                <option value="blue darken-2">blue darken-2   </option>
-                <option value="teal darken-2">teal darken-2   </option>
-                <option value="deep-orange darken-2">deep-orange darken-2   </option>
-                <option value="cyan darken-2">cyan darken-2   </option>
-                <option value="lime darken-2">lime darken-2   </option>
-                <option value="light-green darken-2"> light-green darken-2  </option>
-                <option value="brown darken-2">brown darken-2   </option>
+                <option value="red lighten-2">1</option>
+                <option value="pink darken-2">2</option>
+                <option value="purple darken-2">3</option>
+                
+                <option value="deep-purple darken-2">4   </option>
+                <option value="indigo darken-2">5   </option>
+                <option value="blue darken-2">6   </option>
+                <option value="teal darken-2">7  </option>
+                <option value="deep-orange darken-2">8  </option>
+                <option value="cyan darken-2">9   </option>
+                <option value="lime darken-2">10   </option>
+                <option value="light-green darken-2">11  </option>
+                <option value="brown darken-2">12   </option>
+                <option value="grandientev-vermelho-claro">13   </option>
+                <option value="grandientev-rosa-claro">14</option>
+                <option value="grandientev-roxo-claro">15</option>
+                <option value="grandientev-azul-roxo-claro">16</option>
+                <option value="grandientev-indigo-claro">17</option>
+                <option value="grandientev-azul-claro">18</option>
+                <option value="grandientev-teal-claro">19</option>
+                <option value="grandientev-laranja-claro">20</option>
+                <option value="grandientev-cyan-claro">21</option>
+                <option value="grandientev-lime-claro">22</option>
+                <option value="grandientev-verde-claro">23</option>
+                <option value="grandientev-marrom-claro">24</option>
+               
                 </select>
                 <label>Materialize Select</label>
             </div>
@@ -72,45 +87,40 @@ require_once 'classe/classeCategoria.php';
                 
             </script>
 
+
+            
+
             <div class="row">
-                <div class="col s1 m1 red lighten-2">
-                    <p> red lighten-2</p>
-                </div>
-                <div class="col s1 m1 pink darken-2">
-                    <p> pink darken-2</p>
-                </div>
-                <div class="col s1 m1 purple darken-2">
-                    <p> purple darken-2</p>
-                </div>
-                <div class="col s1 m1 deep-purple darken-2">
-                    <p> deep-purple darken-2</p>
-                </div>
-                <div class="col s1 m1 indigo darken-2">
-                    <p> indigo darken-2</p>
-                </div>
-                <div class="col s1 m1 blue darken-2">
-                    <p> blue darken-2</p>
-                </div>
-                <div class="col s1 m1  teal darken-2">
-                    <p>  teal darken-2</p>
-                </div>
-                <div class="col s1 m1   deep-orange darken-2">
-                    <p>   deep-orange darken-2</p>
-                </div>
-                <div class="col s1 m1   cyan darken-2">
-                    <p>   cyan darken-2</p>
-                </div>
-                <div class="col s1 m1  lime darken-2">
-                    <p>  lime darken-2</p>
-                </div>
-                <div class="col s1 m1  light-green darken-2">
-                    <p>  light-green darken-2</p>
-                </div>
-                <div class="col s1 m1   brown darken-2">
-                    <p>   brown darken-2</p>
-                </div>
+            <h6 class="light"> Cor Sólida </h6>
+                <span class="btn red lighten-2 " > 1 </span>
+                <span class="btn pink darken-2 " > 2 </span>
+                <span class="btn purple darken-2 " > 3 </span>
+                <span class="btn deep-purple darken-2 " > 4 </span>
+                <span class="btn indigo darken-2 " > 5 </span>
+                <span class="btn blue darken-2 " > 6 </span>
+                <span class="btn teal darken-2 " > 7 </span>
+                <span class="btn deep-orange darken-2 " > 8 </span>
+                <span class="btn cyan darken-2 " > 9 </span>
+                <span class="btn lime darken-2 " > 10 </span>
+                <span class="btn light-green darken-2 " > 11 </span>
+                <span class="btn brown darken-2 " > 12 </span>
+                
+            </div>
 
-
+            <div class="row">
+                <h6 class="light"> Cor com Gradiente </h6>
+                <span class="btn grandientev-vermelho-claro " > 13 </span>
+                <span class="btn grandientev-rosa-claro " > 14 </span>
+                <span class="btn grandientev-roxo-claro " > 15 </span>
+                <span class="btn grandientev-azul-roxo-claro " > 16 </span>
+                <span class="btn grandientev-indigo-claro " > 17 </span>
+                <span class="btn grandientev-azul-claro" > 18 </span>
+                <span class="btn grandientev-teal-claro" > 19 </span>
+                <span class="btn grandientev-laranja-claro " > 20 </span>
+                <span class="btn grandientev-cyan-claro " > 21 </span>
+                <span class="btn grandientev-lime-claro " > 22 </span>
+                <span class="btn grandientev-verde-claro " > 23 </span>
+                <span class="btn grandientev-marrom-claro " > 24 </span>
             </div>
 
 
