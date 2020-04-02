@@ -23,6 +23,19 @@ require_once 'publicacoes/classe/classePublicacoes.php';
     <div class="container">
         
         <li>Escolha as Cores</li>
+                <span  onclick="trocarCor('red lighten-2')"  class="menu-color-option red lighten-2 " >  </span>
+                <span  onclick="trocarCor('pink darken-2')"  class="menu-color-option pink darken-2 " >  </span>
+                <span  onclick="trocarCor('purple darken-2')"  class="menu-color-option purple darken-2 " >  </span>
+                <span  onclick="trocarCor('deep-purple darken-2')"  class="menu-color-option deep-purple darken-2 " >  </span>
+                <span  onclick="trocarCor('indigo darken-2')"  class="menu-color-option indigo darken-2 " >  </span>
+                <span  onclick="trocarCor('blue darken-2')"  class="menu-color-option blue darken-2 " >  </span>
+                <span  onclick="trocarCor(' teal darken-2')"  class="menu-color-option teal darken-2 " >  </span>
+                <span  onclick="trocarCor('deep-orange darken-2')"  class="menu-color-option deep-orange darken-2 " >  </span>
+                <span  onclick="trocarCor('cyan darken-2 ')"  class="menu-color-option cyan darken-2 " >  </span>
+                <span  onclick="trocarCor('lime darken-2')"  class="menu-color-option lime darken-2 " >  </span>
+                <span  onclick="trocarCor('light-green darken-2')"  class="menu-color-option light-green darken-2 " > </span>
+                <span  onclick="trocarCor(' brown darken-2')"  class="menu-color-option brown darken-2 " > </span>
+
         <span onclick="trocarCor('gradient-45deg-indigo-light-blue')" class="menu-color-option gradient-45deg-indigo-light-blue " >  </span>    
         <span onclick="trocarCor('grandientev-vermelho-claro')" class="menu-color-option grandientev-vermelho-claro " >  </span> 
         <span onclick="trocarCor('grandientev-rosa-claro')" class="menu-color-option grandientev-rosa-claro " > </span> 
@@ -37,6 +50,7 @@ require_once 'publicacoes/classe/classePublicacoes.php';
         <span onclick="trocarCor('grandientev-verde-claro')" class="menu-color-option grandientev-verde-claro " > </span> 
         <span onclick="trocarCor('grandientev-marrom-claro')" class="menu-color-option grandientev-marrom-claro " > </span> 
     </div>   
+
     </ul>
 
 
