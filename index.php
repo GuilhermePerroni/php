@@ -22,7 +22,7 @@ require_once 'publicacoes/classe/classePublicacoes.php';
 		<h3 class="light"> Ultimas Atualizações </h3>
         
         <nav>
-            <div class="nav-wrapper gradient-45deg-indigo-light-blue ">
+            <div id="divPesquisaPrincipal" class="nav-wrapper gradient-45deg-indigo-light-blue ">
             <form action="?pesquisaIncremental" method="POST" >
                 <div class="input-field">
                 <input name="search" id="search" type="search" required>

@@ -45,9 +45,7 @@ endif;
       <script src="../ckeditor4/ckeditor.js"></script>
       <!--<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>-->
 
-      <link rel="stylesheet" type="text/css" href="materialize.min.css">
-      <link rel="stylesheet" type="text/css" href="style.min.css">
-      
+     
       <style>
         
         .gradient-45deg-indigo-light-blue{
@@ -133,10 +131,67 @@ endif;
 
         </style>
 
+        <script>
+
+          function trocarCor(nomeDaCor) {
+              
+              var divPrincipal = document.getElementById('divPrincipal');
+              divPrincipal.className = "col s12 m6 push-m3 nav-wrapper  " + nomeDaCor;
+
+              var divPesquisaPrincipal = document.getElementById('divPesquisaPrincipal');
+              divPesquisaPrincipal.className = "nav-wrapper  " + nomeDaCor;
+
+              
+          }
+
+
+        </script>  
+
 
       </head>
 
     <body>
+
+      <ul id="dropdownColor" class="dropdown-content">
+      <li onclick="trocarCor('gradient-45deg-indigo-light-blue')" ><span class="btn gradient-45deg-indigo-light-blue " >  </span></li>   
+      <li onclick="trocarCor('grandientev-vermelho-claro')" ><span class="btn grandientev-vermelho-claro " >  </span></li>
+      <li onclick="trocarCor('grandientev-rosa-claro')" ><span class="btn grandientev-rosa-claro " > </span></li>
+      <li onclick="trocarCor('grandientev-roxo-claro ')" ><span class="btn grandientev-roxo-claro " > </span></li>
+      <li onclick="trocarCor('grandientev-azul-roxo-claro')" ><span class="btn grandientev-azul-roxo-claro " >  </span></li>
+      <li onclick="trocarCor('grandientev-indigo-claro')" ><span class="btn grandientev-indigo-claro " >  </span></li>
+      <li onclick="trocarCor('grandientev-azul-claro')" ><span class="btn grandientev-azul-claro" >  </span></li>
+      <li onclick="trocarCor('grandientev-teal-claro')" ><span class="btn grandientev-teal-claro" >  </span></li>
+      <li onclick="trocarCor('grandientev-laranja-claro')" ><span class="btn grandientev-laranja-claro " >  </span></li>
+      <li onclick="trocarCor('grandientev-cyan-claro')" ><span class="btn grandientev-cyan-claro " > </span></li>
+      <li onclick="trocarCor('grandientev-lime-claro')" ><span class="btn grandientev-lime-claro " > </span></li>
+      <li onclick="trocarCor('grandientev-verde-claro')" ><span class="btn grandientev-verde-claro " > </span></li>
+      <li onclick="trocarCor('grandientev-marrom-claro')" ><span class="btn grandientev-marrom-claro " > </span></li>
+				
+         
+          <li class="divider"></li>
+			
+      </ul>
+
+      <ul id="dropdownColor1" class="dropdown-content">
+      <li onclick="trocarCor('gradient-45deg-indigo-light-blue')" ><span class="btn gradient-45deg-indigo-light-blue " >  </span></li>   
+      <li onclick="trocarCor('grandientev-vermelho-claro')" ><span class="btn grandientev-vermelho-claro " >  </span></li>
+      <li onclick="trocarCor('grandientev-rosa-claro')" ><span class="btn grandientev-rosa-claro " > </span></li>
+      <li onclick="trocarCor('grandientev-roxo-claro ')" ><span class="btn grandientev-roxo-claro " > </span></li>
+      <li onclick="trocarCor('grandientev-azul-roxo-claro')" ><span class="btn grandientev-azul-roxo-claro " >  </span></li>
+      <li onclick="trocarCor('grandientev-indigo-claro')" ><span class="btn grandientev-indigo-claro " >  </span></li>
+      <li onclick="trocarCor('grandientev-azul-claro')" ><span class="btn grandientev-azul-claro" >  </span></li>
+      <li onclick="trocarCor('grandientev-teal-claro')" ><span class="btn grandientev-teal-claro" >  </span></li>
+      <li onclick="trocarCor('grandientev-laranja-claro')" ><span class="btn grandientev-laranja-claro " >  </span></li>
+      <li onclick="trocarCor('grandientev-cyan-claro')" ><span class="btn grandientev-cyan-claro " > </span></li>
+      <li onclick="trocarCor('grandientev-lime-claro')" ><span class="btn grandientev-lime-claro " > </span></li>
+      <li onclick="trocarCor('grandientev-verde-claro')" ><span class="btn grandientev-verde-claro " > </span></li>
+      <li onclick="trocarCor('grandientev-marrom-claro')" ><span class="btn grandientev-marrom-claro " > </span></li>
+				
+         
+          <li class="divider"></li>
+			
+      </ul>
+      
       <!-- esse aqui é o de mobile -->
       <ul id="dropdownCategoria" class="dropdown-content">
         <?php
@@ -179,9 +234,21 @@ endif;
 
       
   <nav> 
-  <div  class="col s12 m6 push-m3 nav-wrapper gradient-45deg-indigo-light-blue">
+  <div id="divPrincipal" class="col s12 m6 push-m3 nav-wrapper gradient-45deg-indigo-light-blue">
       <a href="#!" class="brand-logo">Menu Principal</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a class="dropdown-trigger" href="#!" data-target="dropdownColor">
+            
+            <i class="material-icons right">more_vert</i>
+          
+          </a></li>
+      </ul>    
+
+      
+        
       <ul class="right hide-on-med-and-down">
         <li> <a href="/index.php" class=""> Inicio </a>     </li>
         
@@ -257,6 +324,14 @@ endif;
 
     <li><div class="divider"></div></li>
     <li> <a href="?deslogar"  class="waves-effect btn red"> Sair </a>     </li>
+    <li><div class="divider"></div></li>      
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="dropdownColor1">
+              Escolha a Sua Cor
+              <i class="material-icons right">more_vert</i>
+            
+            </a>
+          </li>
 
 
 
