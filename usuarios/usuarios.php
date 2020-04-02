@@ -19,6 +19,9 @@ require_once 'classe/classeUsuario.php';
 <div class="row">
 	<div class="col s12 m6 push-m3 ">
 		<h3 class="light"> Usuários </h3>
+		<br>
+		<a href="formularioUsuario.php?novo" class="btn" name="btn-controle"> Adicionar Usuario </a>
+		<br>
 		<table class="col s12 striped " >
 			<thead>
 
@@ -72,7 +75,7 @@ require_once 'classe/classeUsuario.php';
 			</tbody>
 		</table>
 		<br>
-		<a href="formularioUsuario.php?novo" class="btn" name="btn-controle"> Adicionar Usuario </a>
+		
 	</div>
 
 	<script>

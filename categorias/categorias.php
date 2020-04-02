@@ -19,6 +19,9 @@ require_once 'classe/classeCategoria.php';
 <div class="row">
 	<div class="col s12 m6 push-m3 ">
 		<h3 class="light"> Categorias </h3>
+		<br>
+		<a href="formularioCategoria.php?novo" class="btn" name="btn-controle"> Adicionar Categoria </a>
+		<br>
 		<table class="col s12 striped " >
 			<thead>
 
@@ -68,7 +71,7 @@ require_once 'classe/classeCategoria.php';
 			</tbody>
 		</table>
 		<br>
-		<a href="formularioCategoria.php?novo" class="btn" name="btn-controle"> Adicionar Categoria </a>
+		
 	</div>
 
 	<script>

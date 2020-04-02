@@ -18,6 +18,9 @@ require_once 'classe/classePublicacoes.php';
 <div class="row">
 	<div class="col s12 m6 push-m3 ">
 		<h3 class="light"> Publicacões </h3>
+		<br>
+		<a href="formularioPublicacoes.php?novo" class="btn" name="btn-controle"> Adicionar Publicação </a>
+		<br>
 		<table class="col s12 striped " >
 			<thead>
 
@@ -72,7 +75,7 @@ require_once 'classe/classePublicacoes.php';
 			</tbody>
 		</table>
 		<br>
-		<a href="formularioPublicacoes.php?novo" class="btn" name="btn-controle"> Adicionar Publicação </a>
+		
 	</div>
 
 	<script>
