@@ -16,7 +16,7 @@ function clear($input){
 
 
 if(isset($_POST['btn-editar'])):
-    $usuario = new Usuario();
+    $usuario = new UsuarioEditor();
     
     $usuario->id        = clear($_POST['id']);
     $usuario->nome      = clear($_POST['nome']);
