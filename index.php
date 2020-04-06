@@ -21,9 +21,10 @@ require_once 'publicacoes/classe/classePublicacoes.php';
 
     <ul id="slide-out" class="sidenav">
     <div class="container">
-        
+    
+		
         <li>Escolha as Cores</li>
-                <span  onclick="trocarCor('red lighten-2')"  class="menu-color-option red lighten-2 " >  </span>
+                <span  onclick="trocarCor('red lighten-2')"  class="menu-color-option red lighten-2 " >  </span> 
                 <span  onclick="trocarCor('pink darken-2')"  class="menu-color-option pink darken-2 " >  </span>
                 <span  onclick="trocarCor('purple darken-2')"  class="menu-color-option purple darken-2 " >  </span>
                 <span  onclick="trocarCor('deep-purple darken-2')"  class="menu-color-option deep-purple darken-2 " >  </span>

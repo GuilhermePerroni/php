@@ -2,6 +2,8 @@
  
  
  //require_once '/categorias/classe/classeCategoria.php';
+
+ require_once($_SERVER["DOCUMENT_ROOT"].'/usuarios/classe/classeUsuario.php');
  
  require_once($_SERVER["DOCUMENT_ROOT"].'/categorias/classe/classeCategoria.php');
 
@@ -27,6 +29,7 @@ if (!isset($_SESSION['usuariologado'])==true):
     header('Location: /login.php');
     session_destroy();
 endif;
+
 
 ?>
 <!DOCTYPE html>
@@ -150,14 +153,68 @@ endif;
           border-radius:12px
         }
 
-        
-
-
         </style>
 
         <script>
 
+          function criarAbrirBanco() {
+          banco = openDatabase('ProResumo','1.0','Tabelas Acessorios', 2 * 1024 * 1024);
+         
+          criarTabelas();
+          }
+          
+
+          function criarTabelas() {
+            banco.transaction(function (tx) {
+              tx.executeSql('create table if not exists TCores (cor text)',
+              //tx.executeSql('drop table TCores',
+              [],
+              function (tx) {},
+              );
+            });
+          }
+
+          function inserirCor(nomeDaCor) {
+            criarAbrirBanco();
+            deletarCor();  
+                banco.transaction(function (tx) {
+                  
+                  tx.executeSql('insert into TCores (cor) values (?)',
+                  [nomeDaCor],
+                  function (tx) {},);
+                });
+          }
+
+          function deletarCor() {
+                banco.transaction(function (tx) {
+                  tx.executeSql('delete from TCores',
+                  [],
+                  
+                  function (tx) {},);
+                });
+          }
+
+          function montaCor() {
+            var corEscolhida = "";
+            criarAbrirBanco();
+            banco.transaction(function (tx) {
+              tx.executeSql('select * from TCores ',
+              [],
+              function (tx, results) {
+                var tamanho = results.rows.length;
+                
+                for(i=0; i < tamanho; i++) {
+                  item = results.rows.item(i);
+                  //corEscolhida = item['cor'];
+                  trocarCorDefinitivo(item['cor']);
+                }
+              },);
+            });
+            //trocarCorDefinitivo(corEscolhida);
+          }
+
           function trocarCor(nomeDaCor) {
+              inserirCor(nomeDaCor);
               
               var divPrincipal = document.getElementById('divPrincipal');
               divPrincipal.className = "col s12 m6 push-m3 nav-wrapper  " + nomeDaCor;
@@ -168,14 +225,30 @@ endif;
               var divFooterPrincipal = document.getElementById('divFooterPrincipal');
               divFooterPrincipal.className = "page-footer footer  " + nomeDaCor;
               
+          }
+
+          function trocarCorDefinitivo(nomeDaCor) {
+              
+              var divPrincipal = document.getElementById('divPrincipal');
+              divPrincipal.className = "col s12 m6 push-m3 nav-wrapper  " + nomeDaCor;
+
+              var divPesquisaPrincipal = document.getElementById('divPesquisaPrincipal');
+              divPesquisaPrincipal.className = "nav-wrapper  " + nomeDaCor;
+
+              var divFooterPrincipal = document.getElementById('divFooterPrincipal');
+              divFooterPrincipal.className = "page-footer footer  " + nomeDaCor;
               
           }
+
+            
+        
+         
         </script> 
 
+      
       </head>
 
-    <body>
-
+    <body onload="montaCor()">
 
       
       <!-- esse aqui é o de mobile -->

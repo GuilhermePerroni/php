@@ -33,18 +33,18 @@ require_once 'classe/classeEditores.php';
 			<tbody  >
 				<?php
 					
-					$usuario = new Usuario();
-					$resultado = $usuario->buscarUsuario($_SESSION['usuariologadoId']); ?>
+					$usuarioEditor = new UsuarioEditor();
+					$resultado = $usuarioEditor->buscarUsuario($_SESSION['usuariologadoId']); ?>
 
 					
 				
 					<tr >
-						<td> <?php echo $usuario->id; ?> </td>
-						<td> <?php echo $usuario->nome; ?> </td>
-						<td> <?php echo $usuario->curriculo; ?> </td>						
-						<td> <?php echo $usuario->email; ?> </td>
+						<td> <?php echo $usuarioEditor->id; ?> </td>
+						<td> <?php echo $usuarioEditor->nome; ?> </td>
+						<td> <?php echo $usuarioEditor->curriculo; ?> </td>						
+						<td> <?php echo $usuarioEditor->email; ?> </td>
 					
-						<td> <a href="formularioEditores.php?editar=<?php echo $usuario->id; ?>" class="btn-floating orange"> <i class="material-icons"> edit </i>  </a> </td>
+						<td> <a href="formularioEditores.php?editar=<?php echo $usuarioEditor->id; ?>" class="btn-floating orange"> <i class="material-icons"> edit </i>  </a> </td>
 						
 					</tr>
 			

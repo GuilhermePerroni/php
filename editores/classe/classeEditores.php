@@ -6,9 +6,8 @@ if (!isset($_SESSION)) session_start();
 //include_once ROOT_PATH . '/php_action/db_connect.php';
 
 
-class Usuario {
-    
-    
+class UsuarioEditor {
+  
     public $id;
     public $nome;
     public $senha;

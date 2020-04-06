@@ -13,12 +13,12 @@ require_once 'classe/classeEditores.php';
 	<div class="col s12 m6 push-m3  ">
 		<h3 class="light">  
             <?php
-                $usuario = new Usuario();
+                $usuarioEditor = new UsuarioEditor();
         
                 if (isset($_GET['editar'])): 
                     echo "Editar Curriculo";
                 
-                    $usuario->buscarUsuario(mysqli_escape_string($connect, $_GET['editar']));
+                    $usuarioEditor->buscarUsuario(mysqli_escape_string($connect, $_GET['editar']));
 
                 endif;
                 
@@ -28,19 +28,19 @@ require_once 'classe/classeEditores.php';
         <form action="classe/controllerEditores.php" method="POST">
             
             <div class="input-field col s12">
-                <input hidden type="int" name="id" id="id" value="<?php echo $usuario->id; ?>" >
-                <label for="id"> ID: <?php echo $usuario->id; ?> </label>
+                <input hidden type="int" name="id" id="id" value="<?php echo $usuarioEditor->id; ?>" >
+                <label for="id"> ID: <?php echo $usuarioEditor->id; ?> </label>
             </div>
 
             <br><br>
 
             <div class="input-field col s12">
-                <input type="text" name="nome" id="nome" value="<?php echo $usuario->nome; ?>  "   >
+                <input type="text" name="nome" id="nome" value="<?php echo $usuarioEditor->nome; ?>  "   >
                 <label for="nome"> Nome </label>
             </div>
             <br><br><br>
 
-            <textarea rows="50" cols="80" name="curriculo" id="curriculo" value="" > <?php echo $usuario->curriculo; ?>
+            <textarea rows="50" cols="80" name="curriculo" id="curriculo" value="" > <?php echo $usuarioEditor->curriculo; ?>
             
             </textarea>
             <script>   
@@ -48,7 +48,7 @@ require_once 'classe/classeEditores.php';
             </script>
 
             <div class="input-field col s12">
-                <input class="validate"  type="email" name="email" id="email" value="<?php echo $usuario->email; ?>" >
+                <input class="validate"  type="email" name="email" id="email" value="<?php echo $usuarioEditor->email; ?>" >
                 <label for="email"> E-mail </label>
             </div>
 

@@ -15,8 +15,8 @@ require_once 'classe/classeEditores.php';
 			</thead>
             <?php
                  //echo 'Current PHP version: ' . phpversion();
-                $usuario = new Usuario();
-                $resultado = $usuario->buscarTodosUsuarios();
+                $usuarioEditor = new UsuarioEditor();
+                $resultado = $usuarioEditor->buscarTodosUsuarios();
                     
                     
 					if (mysqli_num_rows($resultado) > 0 ): 
