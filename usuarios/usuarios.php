@@ -48,7 +48,8 @@ require_once 'classe/classeUsuario.php';
 					<tr >
 						<td> <?php echo $dados['id']; ?> </td>
 						<td> <?php echo $dados['nome']; ?> </td>
-						<td> <?php echo $dados['senha']; ?> </td>
+						<!--<td> <?php echo $dados['senha']; ?> </td>-->
+						<td> --- </td>
 						<td> <?php echo $dados['email']; ?> </td>
 						<td> <?php echo $dados['editor']; ?> </td>
 						<td> <a href="formularioUsuario.php?editar=<?php echo $dados['id']; ?>" class="btn-floating orange"> <i class="material-icons"> edit </i>  </a> </td>
