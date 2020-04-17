@@ -54,11 +54,27 @@ require_once 'publicacoes/classe/classePublicacoes.php';
 
     </ul>
 
+    
 
 <div class="row">
 	<div class="col s12 m6 push-m3 ">
-		<h3 class="light"> Ultimas Atualizações </h3>
+
+    <div class="carousel ">
+            <?php
+					$categoria = new Categoria();
+					$resultado1 = $categoria->buscarTodosCategorias();
+					if (mysqli_num_rows($resultado1) > 0 ): 
+						while($dadosCat = mysqli_fetch_array($resultado1)):
+				?>
+					<a class="carousel-item  btn <?php echo $dadosCat['cor']; ?>" href="/index.php?buscaCategoriaEspecifica=<?php echo $dadosCat['id']; ?>"><br><br><?php echo $dadosCat['descricao']; ?></a>
+				<?php 
+					endwhile;
+					endif;
+				?>
+    </div>    
+	
         
+        <h3 class="light"> Ultimas Atualizações </h3>
         <nav>
             <div id="divPesquisaPrincipal" class="nav-wrapper gradient-45deg-indigo-light-blue ">
             <form action="?pesquisaIncremental" method="POST" >

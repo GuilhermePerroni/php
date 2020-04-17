@@ -294,7 +294,7 @@ endif;
       
   <nav> 
   <div id="divPrincipal" class="col s12 m6 push-m3 nav-wrapper gradient-45deg-indigo-light-blue">
-      <a href="#!" class="brand-logo">Menu Principal</a>
+      <a href="#!" class="brand-logo">Pro Resumos</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           
       
