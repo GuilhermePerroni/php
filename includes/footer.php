@@ -16,7 +16,7 @@
         
     </script>
           
-        <footer id="divFooterPrincipal" class="page-footer footer grey darken-3">
+        <footer id="divFooterPrincipal" class="page-footer footer indigo darken-2">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">

@@ -293,7 +293,7 @@ endif;
 
       
   <nav> 
-  <div id="divPrincipal" class="col s12 m6 push-m3 nav-wrapper gradient-45deg-indigo-light-blue">
+  <div id="divPrincipal" class="col s12 m6 push-m3 nav-wrapper indigo darken-2">
       <a href="#!" class="brand-logo">Pro Resumos</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           
